@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'RF Dewi';
+  src: url('../fonts/RFDewi-Regular.eot');
+  src: local('RF Dewi Regular'), local('RFDewi-Regular'),
+      url('../fonts/RFDewi-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/RFDewi-Regular.woff2') format('woff2'),
+      url('../fonts/RFDewi-Regular.woff') format('woff'),
+      url('../fonts/RFDewi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'RF Dewi';
+  src: url('../fonts/RFDewi-Semibold.eot');
+  src: local('RF Dewi Semibold'), local('RFDewi-Semibold'),
+      url('../fonts/RFDewi-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/RFDewi-Semibold.woff2') format('woff2'),
+      url('../fonts/RFDewi-Semibold.woff') format('woff'),
+      url('../fonts/RFDewi-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

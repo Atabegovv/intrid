@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Intrid</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <a class="logo" href="#">
+            <img class="logo-img" src="images/logo-red.svg" alt="logo">
+          </a>
+          <nav class="menu">
+            <ul class="menu-list">
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#">Каталог недвижимости</a>
+                <div class="dropdown">
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-menu__col samibold-text">
+                      <a class="dropdown-menu__col-link" href="#">Все квартиры</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры в новостройке</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры во вторичке</a>
+                      <a class="dropdown-menu__col-link" href="#">Акции и скидки</a>
+                    </li>
+                    <li class="dropdown-menu__col">
+                      <a class="dropdown-menu__col-link" href="#">Квартиры студии</a>
+                      <a class="dropdown-menu__col-link" href="#">1-комнатные квартиры</a>
+                      <a class="dropdown-menu__col-link" href="#">2-комнатные квартиры</a>
+                      <a class="dropdown-menu__col-link" href="#">3-комнатные квартиры</a>
+                      <a class="dropdown-menu__col-link" href="#">4-комнатные квартиры</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры в Воронеже</a>
+                    </li>
+                    <li class="dropdown-menu__col">
+                      <a class="dropdown-menu__col-link" href="#">Квартиры на правом берегу</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры на левом берегу</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры в Железнодорожном р-не</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры в Советском р-не</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры в Ленинском р-не</a>
+                      <a class="dropdown-menu__col-link" href="#">Квартиры в Коминтерновском р-не</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list__item"><a class="menu-list__link" href="#">Ипотека</a></li>
+              <li class="menu-list__item"><a class="menu-list__link" href="#">О нас</a></li>
+              <li class="menu-list__item"><a class="menu-list__link" href="#">Карьера</a></li>
+              <li class="menu-list__item"><a class="menu-list__link" href="#">Отзывы</a></li>
+              <li class="menu-list__item"><a class="menu-list__link" href="#">Вакансии</a></li>
+              <li class="menu-list__item"><a class="menu-list__link" href="#">Прочее</a></li>
+            </ul>
+          </nav>
+          <a class="header-btn btn-link" href="#">Офисы и контакты</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="filter" style="background-image: url(images/selects-bg.jpg);">
+        <div class="container">
+          <div class="filter-top">
+            <h2 class="filter-top__title title">Сотрудничество начинается с доверия</h2>
+            <p class="filter-top__text">«Траст» входит в состав Российской Гильдии Риэлторов. Стандарты качества услуг компании сертифицированы, деятельность застрахована.</p>
+          </div>
+
+          <form class="filter-form" action="#">
+            <div class="select">
+
+              <div class="select-item select-flat">
+                <h3 class="select-item__title"> Квартиры</h3>
+                <div class="select-item__dropdown">
+                  <div class="select-flat-btns">
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <div class="select-flat__checkbox">Жилая</div>
+                    </label>
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <div class="select-flat__checkbox">Коммерческая</div>
+                    </label>
+                  </div>  
+                  <div class="select-flat-check">
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Квартира в новостройке</span>
+                    </label>
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox" checked>
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Квартира во вторичке</span>
+                    </label>
+                  </div>                  
+                  <div class="select-flat-check">
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Комната</span>
+                    </label>
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox" checked>
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Доля</span>
+                    </label>
+                  </div>  
+                  <div class="select-flat-check">
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Дом или дача</span>
+                    </label>
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox" checked>
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Часть дома</span>
+                    </label>
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Таунхаус</span>
+                    </label>
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Участок</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="select-item select-room">
+                <h3 class="select-item__title">Комнатность</h3>
+                <div class="select-item__dropdown">
+                  <div class="select-room-btns">
+                    <label class="select-room__label">
+                      <input class="select-room__input" type="checkbox">
+                      <div class="select-room__checkbox">1</div>
+                    </label>
+                    <label class="select-room__label">
+                      <input class="select-room__input" type="checkbox">
+                      <div class="select-room__checkbox">2</div>
+                    </label>
+                    <label class="select-room__label">
+                      <input class="select-room__input" type="checkbox">
+                      <div class="select-room__checkbox">3</div>
+                    </label>
+                    <label class="select-room__label">
+                      <input class="select-room__input" type="checkbox">
+                      <div class="select-room__checkbox">4</div>
+                    </label>
+                    <label class="select-room__label">
+                      <input class="select-room__input" type="checkbox">
+                      <div class="select-room__checkbox">5+</div>
+                    </label>
+                  </div>  
+                  <div class="select-flat-check">
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox">
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Студия</span>
+                    </label>
+                    <label class="select-flat__label">
+                      <input class="select-flat__input" type="checkbox" checked>
+                      <span class="select-flat__checkbox"></span>
+                      <span class="select-flat__text">Свободная планировка</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="select-item select-price">
+                <h3 class="select-item__title">Стоимость</h3>
+                <div class="select-item__dropdown select-price__dropdown">
+                  <label class="select-price__label">
+                    <input class="select-price__input" type="number" placeholder="от">
+                    <span class="select-price__span">₽</span>
+                  </label>
+                  <label class="select-price__label">
+                    <input class="select-price__input" type="number" placeholder="до">
+                    <span class="select-price__span">₽</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="select-item select-location">
+                <h3 class="select-item__title">Адрес</h3>
+                <div class="select-item__dropdown">
+                  <div class="select-location-group">
+                    Район
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Железнодорожный</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Советский</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Железнодорожный</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Советский</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Железнодорожный</div>
+                    </label>
+                  </div>
+                  <div class="select-location-group">
+                    Адрес
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Железнодорожников, 1 Винзили</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Советский, 2 Централный</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Железнодорожников, 1 Винзили</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Советский, 2 Централный</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Железнодорожников, 1 Винзили</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Советский, 2 Централный</div>
+                    </label>
+                  </div>
+                  <div class="select-location-group">
+                    Жилой комплекс
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Жилой комплекс 1</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Жилой комплекс 2</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Жилой комплекс 3</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Жилой комплекс 4</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Жилой комплекс 5</div>
+                    </label>
+                    <label class="select-location__label">
+                      <input class="select-location__input" type="checkbox">
+                      <div class="select-location__checkbox">Жилой комплекс 6</div>
+                    </label>
+                    
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="filter-form__btn btn-search" type="submit">Поиск</button>
+          </form>
+
+          <div class="filter-links">
+            <a class="item" href="#">
+              <h3 class="item-title">Ипотека онлайн</h3>
+              <p class="item-text">Поможем получить одобрение банков, чтобы вы могли</p>
+              <img class="item-icon" src="images/arrow-right.svg" alt="item icon">
+              <img class="item-img" src="images/check.png" alt="item img">
+            </a>
+            <a class="item" href="#">
+              <h3 class="item-title">Поменяем на новую</h3>
+              <p class="item-text">Поможем получить одобрение банков, чтобы вы могли</p>
+              <img class="item-icon" src="images/arrow-right.svg" alt="item icon">
+              <img class="item-img" src="images/reverse.png" alt="item img">
+            </a>
+            <a class="item" href="#">
+              <h3 class="item-title">Оценка стоимости</h3>
+              <p class="item-text">Поможем получить одобрение банков, чтобы вы могли</p>
+              <img class="item-icon" src="images/arrow-right.svg" alt="item icon">
+              <img class="item-img" src="images/wallet.png" alt="item img">
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer"></footer>
+  </div>
+  <script src="js/scripts.min.js"></script>
+</body>
+</html>

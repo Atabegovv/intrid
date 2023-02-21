@@ -1,0 +1,19 @@
+//variables & mixin
+$accent: #DC1919;
+$white: #fff;
+$black: #191919;
+$red: #C71E1E;
+$grey: #3e3e3e;
+$blue: #416494;
+
+$text-color: #838383;
+$border-color: #e0e0e0;
+$border-color-2: #606060;
+$border-color-3: #dedede;
+
+%input-none{
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
