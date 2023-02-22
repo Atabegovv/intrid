@@ -74,6 +74,9 @@
 @media (max-width: 840px){
   .select{
     display: block;
+    &-price__span{
+      left: 280px;
+    }
   }
   .filter-form{
     padding-right: 0;
@@ -161,6 +164,14 @@
     }
     &-link-btn{
       width: 200px;
+    }
+  }
+  .select{
+    &-price__input{
+      width: 280px;
+    }
+    &-price__span{
+      left: 260px;
     }
   }
 }

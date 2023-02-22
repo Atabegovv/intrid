@@ -228,12 +228,9 @@
         right: 20px;
         transition: all .2s;
       }
-      &.active{
+      &:hover{
         &::after{
           transform: rotate(180deg);
-        }
-        & ~ .select-item__dropdown{
-          display: block;
         }
       }
     }
@@ -251,12 +248,13 @@
       left: 0;
       display: none;
       animation: dropdown .2s ease;
-      // &.active{
-      //   display: block;
-      // }
     }
   }
-
+  .select-item:hover{
+    .select-item__dropdown{
+      display: block;
+    }
+  }
   
   &-flat{
     &-btns{
