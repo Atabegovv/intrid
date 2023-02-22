@@ -9,7 +9,6 @@ body {
    line-height: 1.5;
    color: $black;
    background-color: $white;
-   background-color: #ccc;
    min-width: 320px;
 }
 .wrapper{
@@ -43,7 +42,7 @@ img {
       color: $white;
    }
 }
-.btn-search{
+.btn-primary{
    color: $white;
    background-color: $accent;
    border-radius: 4px;
@@ -53,7 +52,21 @@ img {
    cursor: pointer;
    transition: .3s ease-out;
    &:hover{
-      transform: scale(0.95);
+      // transform: scale(0.95);
+      background-color: $red;
+   }
+}
+.btn-secondary{
+   color: $white;
+   background-color: $border-color-2;
+   border-radius: 4px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: .3s ease-out;
+   &:hover{
+      background-color: $accent;
    }
 }
 .samibold-text{

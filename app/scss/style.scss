@@ -150,7 +150,7 @@
 .select{
   display: flex;
   &-item{
-    padding: 26px 35px 26px 22px;
+    width: 100%;
     position: relative;
     &::after{
       position: absolute;
@@ -164,16 +164,50 @@
     &:last-child::after{
       display: none;
     }
+    &__title{
+      padding: 26px 35px 26px 22px;
+      cursor: pointer;
+      position: relative;
+      &::after{
+        position: absolute;
+        content: '';
+        background-image: url(../images/angle.svg);
+        width: 10px;
+        height: 6px;
+        top: 36px;
+        right: 20px;
+        transition: all .2s;
+      }
+      &.active{
+        &::after{
+          transform: rotate(180deg);
+        }
+      }
+    }
     &__dropdown{
+      padding: 0 20px 40px ;
+      background-color: $white;
+      box-shadow: 0px 835px 334px rgba(0, 0, 0, 0.01), 0px 470px 282px rgba(0, 0, 0, 0.05), 0px 209px 209px rgba(0, 0, 0, 0.09), 0px 52px 115px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      z-index: 10;
+      min-width: 100%;
+      max-height: 550px;
+      overflow-y: auto;
+      position: absolute;
+      top: 76px;
+      left: 0;
       display: none;
+      animation: dropdown .2s ease;
+      &.active{
+        display: block;
+      }
     }
   }
 
   
   &-flat{
-    // max-width: 260px;
     &-btns{
-      display: flex;
+      display: inline-flex;
       margin-top: 30px;
       border-radius: 4px;
       overflow: hidden;
@@ -292,7 +326,7 @@
 
   &-price{
     &__dropdown{
-      padding: 26px 0px 36px;
+      padding: 26px 20px 36px;
     }
     &__label{
       display: block;
@@ -324,6 +358,7 @@
     }
     &__label{
       display: flex;
+      min-width: 320px;
       height: 30px;
       cursor: pointer;
     }
@@ -343,7 +378,6 @@
       color: $black;
     }
   }
-
 }
 
 .item{
@@ -355,6 +389,7 @@
   border-radius: 4px;
   color: $white;
   position: relative;
+  animation: item-link 5s infinite;
   &-title{
     font-size: 21px;
     line-height: 24px;
@@ -367,11 +402,16 @@
     margin-bottom: 35px;
     z-index: 2;
   }
+  &-icon{
+    transition: all .5s;
+  }
   &-img{
     position: absolute;
     max-width: 170px;
     bottom: 0;
     right: 0;
+    transition: all .5s;
+    transform: rotate3d(0, 1, 0, 45deg);
   }
   &:nth-child(1){
     background-color: $red;
@@ -382,7 +422,200 @@
   &:nth-child(3){
     background-color: $blue;
   }
+  &:hover{
+    .item-img{
+      transform: rotate3d(0, 1, 0, 0deg);
+    }
+    .item-icon{
+      transform: translateX(10px);
+    }
+  }
 }
+@keyframes item-link{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(20px);}
+  100%{transform: translateY(0px);}
+}
+
+.exclusive{
+  &-top{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__text{
+      max-width: 520px;
+    }
+    &__title{
+      font-size: 35px;
+      line-height: 41px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    &__desc{
+      color: $text-color;
+    }
+    &__btn{
+      width: 272px;
+      height: 58px;
+    }
+  }
+  &-slider{
+    position: relative;
+  }
+  &-slider-button-next, &-slider-button-prev{
+    width: 38px;
+    height: 38px;
+    border-radius: 4px;
+    background-color: $scrollbar-color;
+    cursor: pointer;
+    transition: all .3s;
+    position: absolute;
+    top: 42%;
+    &::after{
+      position: absolute;
+      content: '';
+      width: 13px;
+      height: 12px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+    }
+    &:hover{
+      background-color: $accent;
+    }
+    &.swiper-button-disabled{
+      opacity: .5;
+      &:hover{
+        cursor: not-allowed;
+        background-color: $scrollbar-color;
+      }
+    }
+  }
+  &-slider-button-next{
+    right: -60px;
+    &::after{
+      background-image: url(../images/slider-arrow-next.svg);
+    }
+  }
+  &-slider-button-prev{
+    left: -60px;
+    &::after{
+      background-image: url(../images/slider-arrow-prev.svg);
+    }
+  }
+}
+
+.swiper{
+  padding-bottom: 66px;
+  .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
+    height: var(--swiper-scrollbar-size,6px);
+    background-color: $scrollbar-color;
+    border-radius: 0px;
+    position: absolute;
+    bottom: 30px;
+  }
+  .swiper-scrollbar-drag {
+    cursor: pointer;
+    background-color: $accent;
+    border-radius: 0px;
+  }
+}
+.slide{
+  max-width: 1055px;
+  height: 686px;
+  position: relative;
+  &-img{
+    height: 100%;
+  }
+  &-content{
+    padding: 20px 60px 50px 40px;
+    color: $white;
+    // background-color: rgba($color: $black, $alpha: .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+  }
+  &-info__price{
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 41px;
+    margin-bottom: 10px;
+  }
+  &-info__object{
+    font-size: 21px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  &-link-btn{
+    width: 285px;
+    height: 60px;
+  }
+  &--bonus{
+    position: relative;
+    &::after{
+      position: absolute;
+      content: 'Кухня в подарок';
+      padding: 10px 20px;
+      border-radius: 4px;
+      color: $white;
+      background-color: rgba($color: $black, $alpha: .8);
+      top: 35px;
+      left: 45px;
+    }
+  }
+}
+
+
+.footer{
+  background-color: $grey-2;
+  color: $text-color-2;
+  &-top{
+    border-bottom: 1px solid $border-color-2;
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 105px;
+    }
+  }
+  &-btn{
+    width: 162px;
+    height: 37px;
+  }
+  &-copy{
+    &-wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+    }
+    &__social{
+      transition: all .3s ease-out;
+      svg path{
+        fill: $grey-3;
+        transition: all .3s;
+      }
+      &:hover{
+        // transform: translate(0px, -2px);
+        svg path{
+          fill: $accent;
+        }
+      }
+    }
+  }
+  .menu-list__link::after{
+    display: none;
+  }
+}
+
+
 
 
 /* media requests */
