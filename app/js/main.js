@@ -16,6 +16,49 @@ document.querySelector('.burger-menu').onclick = function(){
 
 
 
+
+
+// const select = document.getElementsByClassName("tab");
+//   for (let i = 0; i < select.length; i++) {
+//     select[i].addEventListener("click", function() {
+//       this.classList.toggle("tab--active");
+//     });
+//   };
+
+
+function filterToggle() {
+	const filterTitle = document.querySelectorAll('.select-item__title');
+	const filterBody = document.querySelectorAll('.select-item__dropdown');
+
+	if (filterBody) {
+		filterTitle.forEach(element => {
+			element.addEventListener('click', function (event) {
+				const filterBodyOpened = element.nextElementSibling;
+
+				if (element.classList.contains('opened')) {
+					element.classList.remove('opened');
+					filterBodyOpened.classList.remove('opened');
+				}
+				else {
+					filterTitle.forEach(element => {
+						element.classList.remove('opened');
+					});
+					filterBody.forEach(element => {
+						element.classList.remove('opened');
+					});
+					element.classList.add('opened');
+					filterBodyOpened.classList.add('opened');
+				}
+			});
+		});
+	}
+}
+filterToggle();
+
+
+
+
+
 const swiper = new Swiper('.swiper', {
   navigation:{
     prevEl: '.exclusive-slider-button-prev',
